@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsible AI Isn't a Review Gate — Priya Venkat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="mark" href="/"><strong>Priya Venkat</strong></a>
+  <div class="links">
+    <a href="/#experience">Experience</a>
+    <a href="/blog/">Writing</a>
+    <a href="/#contact">Contact</a>
+  </div>
+</nav>
+
+<main class="wrap">
+  <header class="post-header">
+    <span class="p-date">2026</span>
+    <h1>Responsible AI Isn't a Review Gate — It's a Design Constraint</h1>
+    <p class="dek">How building safety and compliance into the architecture, not the approval process, changes what teams ship.</p>
+  </header>
+
+  <article class="post-body">
+    <p>In a lot of organizations, "responsible AI" lives in a review meeting near the end of a project — a checklist someone runs through before launch. That structure has a predictable failure mode: by the time a system reaches review, its architecture is already set. Whatever the review finds, the team is choosing between shipping late or shipping with known gaps.</p>
+
+    <p>The alternative is treating safety, reliability, and compliance as design constraints from the start — the same category as latency budgets or cost targets. Not a separate workstream that happens after the "real" engineering, but a set of requirements the architecture has to satisfy from the first design doc.</p>
+
+    <h2>What changes when safety is a constraint, not a checklist</h2>
+    <p>Concretely, this looks like deciding upfront where a system is allowed to act autonomously and where it must escalate to a human, before a single line of the agent's planning logic is written. It looks like designing tool access with the assumption that the model will eventually misuse it, and building guardrails at the tool boundary rather than hoping the prompt holds. It looks like logging and traceability that make an incident reviewable in minutes instead of days.</p>
+
+    <p>None of this is free. It's slower in the short term than building the happy path and patching problems as they surface. But for systems making decisions that touch real people's finances, health, or education, the counterfactual — finding out about a failure mode from a user rather than a test — is far more expensive.</p>
+
+    <h2>Compliance as an ally, not an obstacle</h2>
+    <p>Teams that treat compliance requirements as adversarial — something to satisfy with the least possible friction — tend to end up with brittle systems, because they're solving for "pass the review" instead of "actually be safe." Teams that bring compliance and safety partners in early, as co-designers of the system rather than gatekeepers at the end, tend to end up with systems that are both safer and, often, better products — because the same discipline that prevents harm usually also prevents the quieter failures that just make an agent bad at its job.</p>
+
+    <p>Responsible AI, done well, isn't a tax on shipping fast. It's what makes fast shipping sustainable.</p>
+  </article>
+
+  <p style="max-width: 780px; margin: 0 auto; padding: 0 clamp(24px, 6vw, 64px) 60px;">
+    <a class="back-link" href="/blog/">← Back to all posts</a>
+  </p>
+</main>
+
+<footer class="wrap">
+  <div class="foot-row">
+    <div class="links">
+      <a href="mailto:priyav.sub@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/priya26" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="/">Home</a>
+    </div>
+    <span class="copy">© 2026 Priya Venkat</span>
+  </div>
+</footer>
+
+</body>
+</html>

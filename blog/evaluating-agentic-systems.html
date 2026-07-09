@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What "Working" Means for an Agentic System — Priya Venkat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="mark" href="/"><strong>Priya Venkat</strong></a>
+  <div class="links">
+    <a href="/#experience">Experience</a>
+    <a href="/blog/">Writing</a>
+    <a href="/#contact">Contact</a>
+  </div>
+</nav>
+
+<main class="wrap">
+  <header class="post-header">
+    <span class="p-date">2026</span>
+    <h1>What "Working" Means for an Agentic System</h1>
+    <p class="dek">Shipping an agent is the easy part. Knowing whether it's actually doing its job is where the real engineering happens.</p>
+  </header>
+
+  <article class="post-body">
+    <p>Most teams can get an agent to demo well. Fewer can tell you, with any confidence, whether it's actually doing its job in production — and that gap is where most agentic AI initiatives quietly stall.</p>
+
+    <p>A chatbot that answers questions has one obvious failure mode: a wrong answer. An agent that plans, calls tools, and takes multi-step action has many more places to go wrong before you ever see the final output — a bad tool call, a plan built on a stale assumption, a step executed out of order, a handoff between sub-agents that drops context. Evaluating only the end result tells you that something failed, not where or why.</p>
+
+    <h2>Evaluate the trajectory, not just the destination</h2>
+    <p>The teams that get this right build evaluation into the architecture from day one, not as a QA step bolted on afterward. That means capturing the full trajectory an agent takes — each tool call, each intermediate decision, each piece of context it was working from — and building evaluation harnesses that can inspect that trajectory, not just the final response.</p>
+
+    <p>This is closer to instrumenting a distributed system than testing a model. You want traceability: given a bad outcome, can you walk back through the agent's steps and find the one where things went wrong? Without that, debugging becomes guesswork, and guesswork doesn't scale past a demo.</p>
+
+    <h2>Human judgment doesn't disappear — it moves upstream</h2>
+    <p>None of this replaces human review. It changes where human judgment gets applied. Instead of spot-checking outputs after the fact, the highest-leverage work is in defining what "good" looks like before the system ever runs: what a correct tool call sequence looks like, what counts as an acceptable answer, where the system should escalate rather than guess.</p>
+
+    <blockquote>An agent's reliability is a property of its evaluation harness as much as its model.</blockquote>
+
+    <p>That's a shift in mindset as much as tooling. Teams with a strong evaluation-first culture — the kind that comes naturally from a statistics or experimental background — tend to build agentic systems that hold up in production, because they were never treating "it works" as a demo-day statement. It was always a measurable, ongoing claim.</p>
+  </article>
+
+  <p style="max-width: 780px; margin: 0 auto; padding: 0 clamp(24px, 6vw, 64px) 60px;">
+    <a class="back-link" href="/blog/">← Back to all posts</a>
+  </p>
+</main>
+
+<footer class="wrap">
+  <div class="foot-row">
+    <div class="links">
+      <a href="mailto:priyav.sub@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/priya26" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="/">Home</a>
+    </div>
+    <span class="copy">© 2026 Priya Venkat</span>
+  </div>
+</footer>
+
+</body>
+</html>
